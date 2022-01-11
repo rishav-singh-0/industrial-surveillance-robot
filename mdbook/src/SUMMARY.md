@@ -2,5 +2,5 @@
 
 - [Introduction](./Readme.md)
 - [Description](./Discription.md)
-- [Hardware Specifications](./Hardware.md)
-- [Software Specifications](./Software.md)
+- [Hardware](./hardware/Readme.md)
+- [Software](./software/Readme.md)
