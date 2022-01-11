@@ -55,3 +55,6 @@
     + Two DC 5V pins of the GPIO headers (5V)
     + 2-pin external power header (3.6-5.7V)
     
+| Component | Description |
+|:---------|:---------|
+| De0-Nano     | def     |
