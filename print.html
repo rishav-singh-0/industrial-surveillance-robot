@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/ModelSim.html"><strong aria-hidden="true">4.1.</strong> ModelSim</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/Modelsim.html"><strong aria-hidden="true">4.1.</strong> ModelSim</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -234,6 +234,23 @@ accidents.</p>
 <li>Sqlite for database management.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modelsim"><a class="header" href="#modelsim">ModelSim</a></h1>
+<p><img src="software/../images/ModelSim.png" alt="ModelSim" /></p>
+<p>We are using EDA(Electronic Design Automation) tools like <code>ModelSim</code> for the simulation of our logic. There are lots of other simulatiors are avalable in internet for velidating and checking the HDL descriptions.</p>
+<p>Verilog is independent of this tools so there will be same output in all the simulatators but at the time of implimentation there will be different RTL design based on the compney whose implimentation tool we are using.</p>
+<p>ModelSim comes with different edition like <code>Intel</code>, <code>Xilinxs</code> and <code>Professional edition</code> which is independent edition so there willl not be any inbuilt support for FPGA libraries for different kind of boards.</p>
+<p>In HDL, Verilog will not need any library but VHDL will require atleast one library called IEEE library.</p>
+<ul>
+<li>In ModelSim there is 2 type of system we can use.
+<ol>
+<li>GUI</li>
+<li>Command Based(Through <code>transcript</code> window)</li>
+</ol>
+</li>
+</ul>
+<p>ModelSim is having proprietary representation of HDL which is being written by programmer. It will try to replicate how things will actually work while working with the simulation.</p>
+<ul>
+<li>Simulation Guide:</li>
+</ul>
 
                     </main>
 
