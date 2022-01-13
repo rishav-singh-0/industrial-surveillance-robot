@@ -5,4 +5,4 @@
 - [Hardware](./hardware/Readme.md)
   - [DE0-Nano](./hardware/de0-nano.md)
 - [Software](./software/Readme.md)
-  - [ModelSim](./software/ModelSim.md)
+  - [ModelSim](./software/Modelsim.md)
