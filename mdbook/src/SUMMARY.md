@@ -6,7 +6,7 @@
   - [DE0-Nano](./hardware/de0-nano.md)
 - [Software](./software/Readme.md)
   - [Installation](./software/Installation.md)
-  - [Installation](./software/Getting_Started_with_Quartus.md)
+  - [Quartus](./software/Getting_Started_with_Quartus.md)
   - [ModelSim](./software/Modelsim.md)
   
   
