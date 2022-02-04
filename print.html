@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/Modelsim.html"><strong aria-hidden="true">4.1.</strong> ModelSim</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/Installation.html"><strong aria-hidden="true">4.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="software/Getting_Started_with_Quartus.html"><strong aria-hidden="true">4.2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="software/Modelsim.html"><strong aria-hidden="true">4.3.</strong> ModelSim</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -233,6 +233,207 @@ accidents.</p>
 <li>Firebase for hosting resources online (Cloud communication on a server)</li>
 <li>Sqlite for database management.</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installation-of-quartus-prime-191-lite--modelsim"><a class="header" href="#installation-of-quartus-prime-191-lite--modelsim">Installation of Quartus Prime 19.1 Lite &amp; ModelSim</a></h1>
+<p>Please follow below link for the installation of the softwares.</p>
+<p><a href="https://fpgasoftware.intel.com/19.1/?edition=lite&amp;platform=windows">Installation Link</a></p>
+<p>Please select the options which are displayed below</p>
+<p><img src="software/../images/version.png" alt="Version Info" /></p>
+<p>There are two ways for installing the software:</p>
+<ol>
+<li>Installing by downloading <code>Combined Files</code></li>
+<li>Installing by downloading <code>Individual Files</code></li>
+</ol>
+<p>We will Download from Individual files since we are working with a perticular board so it will save some data :)</p>
+<p>Please select the options which are displayed below and download 3 files for getting started with installation.</p>
+<p><img src="software/../images/download.png" alt="Required Download" /></p>
+<p>After downloading the files this 3 files will be there in download folder or it will be on the perticular path which you have selected.</p>
+<p><img src="software/../images/files.png" alt="Files" /></p>
+<h2 id="installation-steps"><a class="header" href="#installation-steps"><strong>Installation steps</strong></a></h2>
+<ol>
+<li>
+<p>Double click on highlited application and install it with the default options.</p>
+<ul>
+<li>At the end it will take some time for getting Quartus and ModelSim installed.</li>
+</ul>
+</li>
+<li>
+<p>After the installation we need to add the device which is <code>Cyclone 4</code>, It's for getting the support of <code>de0 - neno board</code>.</p>
+<ul>
+<li>copy the <code>cyclone-19.1.0.670.qdz</code> file( which is for <code>Cyclone IV</code> support file) in the <code>C:/intelFPGA lite/19.1/modelsim ase/win32aloem</code> for getting the support of that device family while working with the project. </li>
+<li>QDZ file is a Altera Quartus II Device Package. Altera Quartus is a programmable logic device design software from Altera which is now owned by INTEL.</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>There is another way of adding the device!
+<ul>
+<li>click on start menu and search for <code>Device installer</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="software/../images/device_installer.png" alt="Device installer" /></p>
+<ul>
+<li>Open this application and do as directed</li>
+</ul>
+<p><img src="software/../images/device_installer_1.png" alt="Step-1" /></p>
+<ul>
+<li>Click on the next</li>
+</ul>
+<p><img src="software/../images/device_installer_2.png" alt="Step-2" /></p>
+<ul>
+<li>Select the folder in which you are having <code>.qdz</code> file/files and then click on the next.</li>
+</ul>
+<p><img src="software/../images/device_installer_3.png" alt="Step-3" /></p>
+<ul>
+<li>Select the required device and click on the next and get it done!</li>
+</ul>
+<p><strong>Now the installation is done ;)</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started-with-quartus"><a class="header" href="#getting-started-with-quartus">Getting Started With Quartus</a></h1>
+<p>Here we will start with the Quartus software. We will create projects( Which will contains nedessary files), HDL files( It will contain desired hardware implimentation design), waveform vector files( It will contain waveform responce of the HDL description) and test benches( For validating the HDL description). </p>
+<h2 id="1-creating-a-new-project"><a class="header" href="#1-creating-a-new-project"><strong>1. Creating a new project</strong></a></h2>
+<ul>
+<li>In order to create the project select any of the option which is highlited below</li>
+</ul>
+<p><img src="software/../images/proj_1.png" alt="Step-1" /></p>
+<ul>
+<li>Now click on the <code>next</code> for further process</li>
+</ul>
+<p><img src="software/../images/proj_2.png" alt="Step-2" /></p>
+<ul>
+<li>In below step please select the target folder and give the name of the project and click on the next</li>
+</ul>
+<blockquote>
+<p>Note: If possible then please not select target folder in <code>C partition</code></p>
+</blockquote>
+<p><img src="software/../images/proj_3.png" alt="Step-3" /></p>
+<ul>
+<li>Click on <code>empty project</code> for manually selecting or adding additional files, libraries, devices, EDA( Electronic Design Automation) tool selection and HDL selection.</li>
+</ul>
+<p><img src="software/../images/proj_4.png" alt="Step-4" /></p>
+<ul>
+<li>In add file section directly click on the next, since for now we don't require any files.</li>
+</ul>
+<p><img src="software/../images/proj_5.png" alt="Step-5" /></p>
+<ul>
+<li>In this step carefully select the familt which is <code>Cyclone IV E</code> and from avalable device select <code>EP4CE22F17C6</code> . Here insted of scorlling we can search the device by simply giving name in right side.</li>
+</ul>
+<p><img src="software/../images/proj_6.png" alt="Step-6" /></p>
+<ul>
+<li>Select simulation tool as <code>ModelSim</code> and select simulation format as <code>Verilog HDL</code>.</li>
+</ul>
+<p><img src="software/../images/proj_7.png" alt="Step-7" /></p>
+<ul>
+<li>There is summery of the selected options and configuration. Once these things are saved then they will not be changed through out the project.</li>
+<li>Click on the <code>Finish</code> for successfully creating a new project.</li>
+</ul>
+<h2 id="2-creating-a-new-file-in-a-project"><a class="header" href="#2-creating-a-new-file-in-a-project"><strong>2. Creating a new file in a project</strong></a></h2>
+<ul>
+<li>After creating a project and setting up the Quartus for a perticular boards and configuration by the project creation, We can now add the HDL description in the project by creating a new files( Here <code>verilog files</code>).</li>
+<li>We will firstly start with the creating the <code>AND gate</code>. As we know it will have 2 input and 1 output. 
+<ul>
+<li>Here <code>A</code> and <code>B</code> will be as input pins and <code>C</code> will be as output pin.</li>
+</ul>
+</li>
+</ul>
+<p>Follow the steps for creating a new file:</p>
+<ul>
+<li>Click on <strong>File --&gt; New</strong></li>
+</ul>
+<p><img src="software/../images/f_1.png" alt="Step-1" /></p>
+<ul>
+<li>Select <code>Verilog HDL File</code> and then click on <code>OK</code>.</li>
+</ul>
+<blockquote>
+<p>Here we can also select VHDL as HDL source but for now we are going ahead with Verilog HDl but remember VHDL is also a powerful HDL.</p>
+</blockquote>
+<p><img src="software/../images/f_2.png" alt="Step-2" /></p>
+<ul>
+<li>
+<p>For testing please paste the below code in newly created file. </p>
+</li>
+<li>
+<p>Verilog code for AND gate</p>
+</li>
+</ul>
+<pre><code>module AND_GATE        // Module name: AND_GATE
+(
+	input A,B,        // defining inputs A and B of AND gate 
+	output C          // defining output of AND gate
+);
+
+assign C = A &amp; B;   // Logic implementation
+endmodule
+
+</code></pre>
+<ul>
+<li>After writing this code press <code>ctrl + s</code> for saving the file and give the name same as you given the name of module which is <code>AND_GATE</code> here. </li>
+<li>It's applied for the top level entity so we need to follow this method of naming for top level file which will contain main design which can be individual file or combination of different HDL design files.</li>
+</ul>
+<h2 id="3-compiling-or-synthesizing-the-project-files"><a class="header" href="#3-compiling-or-synthesizing-the-project-files"><strong>3. Compiling or synthesizing the project files</strong></a></h2>
+<ul>
+<li>For compiling the file or design firstly selet it as top level entity.</li>
+<li>After selecting it as top level entity there wil be message highlited as below.</li>
+</ul>
+<p><img src="software/../images/f_3.png" alt="Step-1" /></p>
+<ul>
+<li>Click on Start compilation icon or press <code>ctrl + L</code> for compilation of <code>AND_GATE</code></li>
+</ul>
+<p><img src="software/../images/f_4.png" alt="Step-2" /></p>
+<ul>
+<li>During the compilation these processes are carried out.</li>
+</ul>
+<p><img src="software/../images/f_5.png" alt="Step-3" /></p>
+<ul>
+<li>After compilation if there will not be any error then we can see this kind of message at the end.</li>
+<li>If there is any error then we need to correct the code.</li>
+</ul>
+<p><img src="software/../images/f_6.png" alt="Step-4" /></p>
+<h2 id="4-verifying-hdl-description"><a class="header" href="#4-verifying-hdl-description"><strong>4. Verifying HDL Description</strong></a></h2>
+<p>We can perform timing simulation of a perticular module using EDA simulation tools. There are two methods for verifying the designs. </p>
+<ol>
+<li>By appplying manual inputs to the input pins.</li>
+<li>By designing testbench for the module, we can verify the design.</li>
+</ol>
+<h3 id="first-method"><a class="header" href="#first-method"><strong>First method</strong></a></h3>
+<ul>
+<li>click on <code> File --&gt; New --&gt; University Program VWF</code>.</li>
+</ul>
+<p><img src="software/../images/v_1.png" alt="Step-1" /></p>
+<ul>
+<li>Click on the <code>Edit --&gt; Insert --&gt; Insert Node or Bus</code>.</li>
+</ul>
+<p><img src="software/../images/v_2.png" alt="Step-2" /></p>
+<ul>
+<li>Click on the <code>Node Finder</code> for finding the avalable nodes.</li>
+</ul>
+<p><img src="software/../images/v_3.png" alt="Step-3" /></p>
+<ul>
+<li>
+<p>Now click on the <code>List</code> for listing own the avalable Nodes.
+<img src="software/../images/v_4.png" alt="Step-4" /></p>
+</li>
+<li>
+<p>Click on the <code>&gt;&gt;</code> for selecting the avalable nodes. Here we can also select a perticular node by clicking <code>&gt;</code> . and from othere option we can put the selected nodes in to avalable node section.</p>
+</li>
+<li>
+<p>After this process click on <code>OK</code>.</p>
+</li>
+</ul>
+<p><img src="software/../images/v_5.png" alt="Step-5" /></p>
+<ul>
+<li>Now the waveform editior will pop up and we can select the different logic levels and clocks. </li>
+<li>In below we have selected clock with different periods for analizing the possible output.</li>
+</ul>
+<p><img src="software/../images/v_6.png" alt="Step-6" /></p>
+<ul>
+<li>Now click on the <code>simulation --&gt; Run Functional SImulation</code> .</li>
+</ul>
+<p><img src="software/../images/v_7.png" alt="Step-7" /></p>
+<ul>
+<li>After that a <code>simulation flow window</code> will pop up and after that the output window will be shown.</li>
+</ul>
+<p><img src="software/../images/v_8.png" alt="Step=8" />
+<img src="software/../images/v_9.png" alt="Step-9" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="modelsim"><a class="header" href="#modelsim">ModelSim</a></h1>
 <p><img src="software/../images/ModelSim.png" alt="ModelSim" /></p>
 <p>We are using EDA(Electronic Design Automation) tools like <code>ModelSim</code> for the simulation of our logic. There are lots of other simulatiors are avalable in internet for velidating and checking the HDL descriptions.</p>

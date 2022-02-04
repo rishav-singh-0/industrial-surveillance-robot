@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>ModelSim - Industrial Surveillance Robot</title>
+        <title>Installation - Industrial Surveillance Robot</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="../hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="../software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software/Installation.html"><strong aria-hidden="true">4.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../software/Getting_Started_with_Quartus.html"><strong aria-hidden="true">4.2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../software/Modelsim.html" class="active"><strong aria-hidden="true">4.3.</strong> ModelSim</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../Discription.html"><strong aria-hidden="true">2.</strong> Description</a></li><li class="chapter-item expanded "><a href="../hardware/index.html"><strong aria-hidden="true">3.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hardware/de0-nano.html"><strong aria-hidden="true">3.1.</strong> DE0-Nano</a></li></ol></li><li class="chapter-item expanded "><a href="../software/index.html"><strong aria-hidden="true">4.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../software/Installation.html" class="active"><strong aria-hidden="true">4.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../software/Getting_Started_with_Quartus.html"><strong aria-hidden="true">4.2.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../software/Modelsim.html"><strong aria-hidden="true">4.3.</strong> ModelSim</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -134,31 +134,71 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="modelsim"><a class="header" href="#modelsim">ModelSim</a></h1>
-<p><img src="../images/ModelSim.png" alt="ModelSim" /></p>
-<p>We are using EDA(Electronic Design Automation) tools like <code>ModelSim</code> for the simulation of our logic. There are lots of other simulatiors are avalable in internet for velidating and checking the HDL descriptions.</p>
-<p>Verilog is independent of this tools so there will be same output in all the simulatators but at the time of implimentation there will be different RTL design based on the compney whose implimentation tool we are using.</p>
-<p>ModelSim comes with different edition like <code>Intel</code>, <code>Xilinxs</code> and <code>Professional edition</code> which is independent edition so there willl not be any inbuilt support for FPGA libraries for different kind of boards.</p>
-<p>In HDL, Verilog will not need any library but VHDL will require atleast one library called IEEE library.</p>
-<ul>
-<li>In ModelSim there is 2 type of system we can use.
+                        <h1 id="installation-of-quartus-prime-191-lite--modelsim"><a class="header" href="#installation-of-quartus-prime-191-lite--modelsim">Installation of Quartus Prime 19.1 Lite &amp; ModelSim</a></h1>
+<p>Please follow below link for the installation of the softwares.</p>
+<p><a href="https://fpgasoftware.intel.com/19.1/?edition=lite&amp;platform=windows">Installation Link</a></p>
+<p>Please select the options which are displayed below</p>
+<p><img src="../images/version.png" alt="Version Info" /></p>
+<p>There are two ways for installing the software:</p>
 <ol>
-<li>GUI</li>
-<li>Command Based(Through <code>transcript</code> window)</li>
+<li>Installing by downloading <code>Combined Files</code></li>
+<li>Installing by downloading <code>Individual Files</code></li>
 </ol>
+<p>We will Download from Individual files since we are working with a perticular board so it will save some data :)</p>
+<p>Please select the options which are displayed below and download 3 files for getting started with installation.</p>
+<p><img src="../images/download.png" alt="Required Download" /></p>
+<p>After downloading the files this 3 files will be there in download folder or it will be on the perticular path which you have selected.</p>
+<p><img src="../images/files.png" alt="Files" /></p>
+<h2 id="installation-steps"><a class="header" href="#installation-steps"><strong>Installation steps</strong></a></h2>
+<ol>
+<li>
+<p>Double click on highlited application and install it with the default options.</p>
+<ul>
+<li>At the end it will take some time for getting Quartus and ModelSim installed.</li>
+</ul>
+</li>
+<li>
+<p>After the installation we need to add the device which is <code>Cyclone 4</code>, It's for getting the support of <code>de0 - neno board</code>.</p>
+<ul>
+<li>copy the <code>cyclone-19.1.0.670.qdz</code> file( which is for <code>Cyclone IV</code> support file) in the <code>C:/intelFPGA lite/19.1/modelsim ase/win32aloem</code> for getting the support of that device family while working with the project. </li>
+<li>QDZ file is a Altera Quartus II Device Package. Altera Quartus is a programmable logic device design software from Altera which is now owned by INTEL.</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>There is another way of adding the device!
+<ul>
+<li>click on start menu and search for <code>Device installer</code></li>
+</ul>
 </li>
 </ul>
-<p>ModelSim is having proprietary representation of HDL which is being written by programmer. It will try to replicate how things will actually work while working with the simulation.</p>
+<p><img src="../images/device_installer.png" alt="Device installer" /></p>
 <ul>
-<li>Simulation Guide:</li>
+<li>Open this application and do as directed</li>
 </ul>
+<p><img src="../images/device_installer_1.png" alt="Step-1" /></p>
+<ul>
+<li>Click on the next</li>
+</ul>
+<p><img src="../images/device_installer_2.png" alt="Step-2" /></p>
+<ul>
+<li>Select the folder in which you are having <code>.qdz</code> file/files and then click on the next.</li>
+</ul>
+<p><img src="../images/device_installer_3.png" alt="Step-3" /></p>
+<ul>
+<li>Select the required device and click on the next and get it done!</li>
+</ul>
+<p><strong>Now the installation is done ;)</strong></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../software/Getting_Started_with_Quartus.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../software/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../software/Getting_Started_with_Quartus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -166,8 +206,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../software/Getting_Started_with_Quartus.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../software/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../software/Getting_Started_with_Quartus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
